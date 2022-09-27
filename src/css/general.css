@@ -22,3 +22,7 @@ body {
   font-family: 'Manrope', sans-serif;
   background-color: hsl(218, 23%, 16%);
 }
+
+button {
+  border: none;
+}
