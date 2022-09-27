@@ -1,11 +1,10 @@
-class AdviceView {
+class AdviceNumView {
   #data;
 
   #adviceNumEl = document.querySelector('.advice-number');
-  #parentEl = document.querySelector('.advice-container');
-  #diceBtn = document.querySelector('.dice-btn');
+  #parentEl = document.querySelector('.advice-number-container');
 
-  renderAdvice(data) {
+  renderAdviceNumber(data) {
     this.#data = data;
     console.log(this.#data);
     const adviceMarkup = this.#generateAdviceMarkup();
@@ -19,8 +18,10 @@ class AdviceView {
 
   #generateAdviceMarkup() {
     return `
-    <p class='advice'>${this.#data}</p>`;
+    <p class="advice-number-text">
+    Advice <span class="advice-number">#${this.#data}</span>
+  </p>`;
   }
 }
 
-export default new AdviceView();
+export default new AdviceNumView();
