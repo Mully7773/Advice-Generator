@@ -3,6 +3,11 @@ class AdviceNumView {
 
   #adviceNumEl = document.querySelector('.advice-number');
   #parentEl = document.querySelector('.advice-number-container');
+  #diceBtn = document.querySelector('.dice-btn');
+
+  addHandlerRender(handler) {
+    this.#diceBtn.addEventListener('click', handler);
+  }
 
   renderAdviceNumber(data) {
     this.#data = data;

@@ -4,6 +4,7 @@ import AdviceView from './views/adviceView.js';
 
 const controlAdvice = async () => {
   try {
+    AdviceView._renderSpinner();
     await model.loadAdvice();
     AdviceView.renderAdvice(model.state.advice);
     AdviceNumView.renderAdviceNumber(model.state.id);
@@ -12,4 +13,9 @@ const controlAdvice = async () => {
   }
 };
 
-controlAdvice();
+const init = () => {
+  AdviceView.addHandlerRender(controlAdvice);
+  AdviceNumView.addHandlerRender(controlAdvice);
+};
+init();
+// controlAdvice();
