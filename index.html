@@ -41,20 +41,30 @@
       <div class="container">
         <div class="advice-box">
           <div class="advice-number-container">
-            <p class="advice-number-text">
+            <h1 class="advice-number-text">
               Advice: <span class="advice-number"></span>
-            </p>
+            </h1>
           </div>
           <div class="advice-container">
-            <p class="advice">Click the green button.</p>
+            <blockquote class="advice">Click the green button.</blockquote>
           </div>
-          <div class="divider">
+          <picture class="divider">
+            <source
+              srcset="./src/images/pattern-divider-desktop.svg"
+              media="(min-width: 1000px"
+            />
             <img
               class="divider-img"
-              src="./src/images/pattern-divider-desktop.svg"
+              src="./src/images/pattern-divider-mobile.svg"
+              aria-hidden="true"
+              alt="divider"
             />
-          </div>
-          <button class="dice-btn">
+            <!-- <img
+              class="divider-img"
+              src="./src/images/pattern-divider-desktop.svg"
+            /> -->
+          </picture>
+          <button aria-label="Generate advice" class="dice-btn">
             <img class="dice-icon" src="./src/images/icon-dice.svg" />
           </button>
         </div>
