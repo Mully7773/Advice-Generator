@@ -77,13 +77,11 @@
   transition: all 0.3s;
 }
 
-.dice-btn:hover {
+.dice-btn:hover,
+.dice-btn::active {
   box-shadow: 0rem 0rem 0.5rem 0rem hsl(217, 19%, 38%),
     0rem 0rem 2rem 0.3rem hsl(150, 100%, 66%),
     0rem 0rem 3rem 0.7rem hsl(217, 19%, 38%);
-}
-
-.dice-btn:active {
 }
 
 .dice-icon {
