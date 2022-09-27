@@ -1,0 +1,51 @@
+/* BELOW 561px Smartphones*/
+@media (max-width: 35.1em) {
+  html {
+    font-size: 56.25%;
+  }
+
+  .container {
+    height: 75vh;
+  }
+
+  .advice-box {
+    margin: 0.8rem;
+    height: 32rem;
+    /* padding-top: 4.2rem; */
+    padding-bottom: 4.2rem;
+  }
+
+  .advice-number-text {
+    font-size: 1.4rem;
+  }
+
+  .advice {
+    font-size: 2.6rem;
+  }
+
+  .dice-btn {
+    width: 6.5rem;
+    height: 6.5rem;
+  }
+}
+
+/* BELOW 400px Smartphones*/
+@media (max-width: 25em) {
+  html {
+    font-size: 48%;
+  }
+}
+
+/* BELOW 324px Smartphones*/
+@media (max-width: 20.25em) {
+  html {
+    font-size: 40%;
+  }
+}
+
+/* Solve sticky hover */
+@media (hover: hover) {
+  .dice-btn:hover {
+    border: 3px solid green;
+  }
+}

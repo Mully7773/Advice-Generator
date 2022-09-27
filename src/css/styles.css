@@ -26,7 +26,7 @@
   align-items: center;
   gap: 2.4rem;
   background-color: hsl(217, 19%, 24%);
-  max-width: 50rem;
+  /* max-width: 50rem; */
   max-width: 40rem;
   /* width: 45rem;
   height: 30rem; */
