@@ -2,6 +2,7 @@ import View from './View.js';
 
 class AdviceView extends View {
   _data;
+  _errorMessage = `We could not find the advice data. Please try refreshing your browser.`;
 
   #adviceNumEl = document.querySelector('.advice-number');
   _parentEl = document.querySelector('.advice-container');

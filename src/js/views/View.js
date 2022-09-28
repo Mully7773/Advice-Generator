@@ -3,11 +3,12 @@ export default class View {
     this._parentEl.innerHTML = '';
   }
 
-  //   _renderError(message = this._errorMessage) {
-  //     const markup = `<div>
-  //         <p class='advice'>${message}
-  //         </div>`;
-  //     this._clear();
-  //     this._parentEl.insertAdjacentHTML('afterbegin', markup);
-  //   }
+  _renderError(message = this._errorMessage) {
+    const markup = `
+    <div>
+        <p class='advice'>${message}
+    </div>`;
+    this._clear();
+    this._parentEl.insertAdjacentHTML('afterbegin', markup);
+  }
 }

@@ -10,6 +10,7 @@ const controlAdvice = async function () {
     AdviceNumView.renderAdviceNumber(model.state.id);
   } catch (err) {
     console.error(err);
+    AdviceView._renderError();
   }
 };
 
