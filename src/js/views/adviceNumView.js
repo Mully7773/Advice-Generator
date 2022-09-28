@@ -1,8 +1,10 @@
-class AdviceNumView {
-  #data;
+import View from './View.js';
+
+class AdviceNumView extends View {
+  _data;
 
   #adviceNumEl = document.querySelector('.advice-number');
-  #parentEl = document.querySelector('.advice-number-container');
+  _parentEl = document.querySelector('.advice-number-container');
   #diceBtn = document.querySelector('.dice-btn');
 
   addHandlerRender(handler) {
@@ -10,22 +12,18 @@ class AdviceNumView {
   }
 
   renderAdviceNumber(data) {
-    this.#data = data;
-    console.log(this.#data);
+    this._data = data;
+    console.log(this._data);
     const adviceMarkup = this.#generateAdviceMarkup();
-    this.#clear();
-    this.#parentEl.insertAdjacentHTML('afterbegin', adviceMarkup);
-  }
-
-  #clear() {
-    this.#parentEl.innerHTML = '';
+    this._clear();
+    this._parentEl.insertAdjacentHTML('afterbegin', adviceMarkup);
   }
 
   #generateAdviceMarkup() {
     return `
-    <p class="advice-number-text">
-    Advice <span class="advice-number">#${this.#data}</span>
-  </p>`;
+    <h1 class="advice-number-text">
+    Advice <span class="advice-number">#${this._data}</span>
+  </h1>`;
   }
 }
 

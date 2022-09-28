@@ -1,8 +1,10 @@
-class AdviceView {
-  #data;
+import View from './View.js';
+
+class AdviceView extends View {
+  _data;
 
   #adviceNumEl = document.querySelector('.advice-number');
-  #parentEl = document.querySelector('.advice-container');
+  _parentEl = document.querySelector('.advice-container');
   #diceBtn = document.querySelector('.dice-btn');
 
   addHandlerRender(handler) {
@@ -10,28 +12,24 @@ class AdviceView {
   }
 
   renderAdvice(data) {
-    this.#data = data;
-    console.log(this.#data);
+    this._data = data;
+    console.log(this._data);
     const adviceMarkup = this.#generateAdviceMarkup();
-    this.#clear();
-    this.#parentEl.insertAdjacentHTML('afterbegin', adviceMarkup);
+    this._clear();
+    this._parentEl.insertAdjacentHTML('afterbegin', adviceMarkup);
   }
 
   _renderSpinner() {
     const spinnerMarkup = `
     <div class="spinner"></div>
     `;
-    this.#clear();
-    this.#parentEl.insertAdjacentHTML('afterbegin', spinnerMarkup);
-  }
-
-  #clear() {
-    this.#parentEl.innerHTML = '';
+    this._clear();
+    this._parentEl.insertAdjacentHTML('afterbegin', spinnerMarkup);
   }
 
   #generateAdviceMarkup() {
     return `
-    <p class='advice'>${this.#data}</p>`;
+    <blockquote class='advice'>${this._data}</blockquote>`;
   }
 }
 

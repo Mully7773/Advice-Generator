@@ -2,7 +2,7 @@ import * as model from './model.js';
 import AdviceNumView from './views/adviceNumView.js';
 import AdviceView from './views/adviceView.js';
 
-const controlAdvice = async () => {
+const controlAdvice = async function () {
   try {
     AdviceView._renderSpinner();
     await model.loadAdvice();
@@ -18,4 +18,3 @@ const init = () => {
   AdviceNumView.addHandlerRender(controlAdvice);
 };
 init();
-// controlAdvice();
